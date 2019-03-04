@@ -1,0 +1,233 @@
+@import reset.css
+
+
+.wrapper
+    width: 100%
+    max-width: 720px
+    margin: 0 auto
+    box-sizing: border-box
+.manager
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    padding: 15px 20px 0 20px
+    box-sizing: border-box
+    &-info
+        position: relative
+        min-height: 120px
+        &-photo
+            width: 120px
+            height: 120px
+            background: url(../img/sales-manager.jpg)
+            background-position: center top
+            border-radius: 50%
+            position: absolute
+        &-data
+            padding: 0 10px 0 130px
+        &-title
+            padding: 0 10px 0 70px
+            border: 1px solid #cecabf
+            background: #fffbc8
+            margin-left: 60px
+            border-radius: 5px
+    &-services
+        flex: 1 1 100%
+        padding: 0 10px 0 130px
+        &-head
+            display: flex
+            justify-content:    flex-end
+            padding: 0 30px 15px 0
+            border-bottom: 1px solid #808080
+            p
+                margin: 0
+                font: 400 13px/13px 'Arial'
+        &-list
+          padding: 15px 30px 15px 0
+          border-bottom: 1px solid #808080 
+        &-total
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding: 15px 30px 30px 0
+          p
+              margin: 0
+              font: 700 16px/16px 'Arial'   
+.data
+    &-name
+        margin: 10px 0
+        font: 700 16px/16px 'Arial'
+    &-position
+        margin: 0 0 10px
+        font: 400 12px/12px 'Arial'
+        color: #808080
+.title
+    &-text
+        padding: 10px 0
+        margin: 0
+        font: 400 14px/16px 'Arial'
+.services
+    &-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 2px
+    &-name
+        width: 100%
+        position: relative
+        
+        &-diagram
+            position: absolute
+            height: 100%
+            border-radius: 0 4px 4px 0
+            border-left: 2px solid #808080
+        p
+            z-index: 111
+            position: relative
+            margin: 0
+            padding: 5px
+            font: 400 13px/13px 'Arial'
+    &-booking .services-name-diagram
+        width: 90%
+        background: #b1e19b
+    &-tours .services-name-diagram
+        width: 23%
+        background: #ace2f8
+    &-hotels .services-name-diagram
+        width: 15%
+        background: #ace2f8
+.comments 
+    &-head
+        display: flex
+        justify-content: space-between
+        padding: 0 20px 5px
+        &-sorting
+            display: flex
+            p
+                margin: 0 10px 0 0
+        &-statistic
+           display: flex
+           width: 20%
+           max-width: 100px
+           justify-content: space-between
+    &-list
+        overflow: hidden
+        height: 335px
+        &-overflow
+            padding: 0 20px 0 0
+            position: relative
+            left: 20px
+            height: 100%
+            box-sizing: border-box
+            overflow: auto
+    &-inputs
+        padding: 30px 20px
+        background: #f2f2f2
+.statistic
+    &-item
+        display: flex
+        align-items: center
+        img
+            margin-right: 2px
+    &-comments
+        img
+            margin-top: 2px          
+.active-sorting
+    font: 700 16px/16px 'Arial'
+.switch-sorting
+    font: 700 14px/14px 'Arial'
+    color: #005da1
+    padding-bottom: 2px
+    border-bottom: 1px solid #005da1
+    cursor: pointer
+.comment
+    padding: 10px 0
+    &-head
+        display: flex
+        align-items: center
+        h6
+            margin: 0 10px 0 0
+            font: 700 14px/14px 'Arial'
+        span
+            font: 400 12px/12px 'Arial'
+            color: #808080
+    &-content
+        margin-top: 15px
+        padding: 15px 20px
+        background: #f2fbff
+        border: 1px solid #cfcfcf
+        position: relative
+        &-tail
+            position: absolute
+            top: -9px
+            width: 20px
+            height: 9px
+            overflow: hidden
+            border-left: 1px solid #cfcfcf
+            &:before
+                content: ""
+                position: absolute
+                display: block
+                width: 10px
+                height: 10px
+                transform: rotate(45deg)
+                background: #f2fbff
+                border: 1px solid #cfcfcf
+                background-clip: padding-box
+                bottom: -6px
+                left: -6.5px
+        p
+            margin: 0
+            font: 400 14px/14px 'Arial'
+.input
+    &-comment
+        height: 65px
+        width: 100%
+        resize: none
+        border: 1px solid #a9a9a9
+        border-radius: 3px
+        box-sizing: border-box
+        margin-bottom: 5px
+        padding: 5px
+        font: 400 12px/12px 'PTSans'
+    &-author
+        width: 40%
+        height: 30px
+        border: 1px solid #a9a9a9
+        border-radius: 3px
+        box-sizing: border-box
+        display: block
+        float: right
+        padding: 5px
+        font: 400 12px/12px 'PTSans'
+    &-btn
+        width: 70%
+        max-width: 280px
+        height: 40px
+        background: #fdd639
+        margin: 35px auto
+        border: none
+        border-radius: 20px
+        display: block
+        cursor: pointer
+        font: 700 14px/14px 'PTSans'
+.cbalink
+    display: none
+@media screen and (max-width: 508px)
+    .data
+        &-name
+            margin: 7px 0
+            font: 700 14px/14px 'Arial'
+        &-position
+            margin: 0 0 7px
+            font: 400 12px/12px 'Arial'
+    .title-text
+        font: 400 12px/12px 'Arial'
+@media screen and (max-width: 435px)
+    .manager-services
+        padding: 0 10px 0 20px
+    .active-sorting
+        font: 700 14px/14px 'Arial'
+    .switch-sorting
+        font: 700 12px/12px 'Arial'
+    .comments-head-statistic
+        width: 23%
