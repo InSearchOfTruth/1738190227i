@@ -65,6 +65,13 @@ class Comment extends React.Component{
              this.setState({comments: arr})
          }
      }
+     keyPress = () =>{
+        if(event.ctrlKey && (event.keyCode==13 || event.keyCode==10) ){
+            this.addComment()
+        }
+         
+         
+     }
      render(){
          return(
              <div>
@@ -74,7 +81,7 @@ class Comment extends React.Component{
                          </div>
                      </div>
                      <div className="comments-inputs">
-                         <textarea type="text" placeholder="Введите комментарий" className="input-comment" ref={(input) => { this.commentInput = input; }}/> 
+                         <textarea type="text" onKeyDown={this.keyPress} placeholder="Введите комментарий" className="input-comment" ref={(input) => { this.commentInput = input; }}/> 
                          <input type="text" placeholder="Введите свое имя" className="input-author" ref={(input) => { this.authorInput = input; }}/>
                          <button onClick={this.addComment.bind(null,)} class="input-btn">Написать консультанту</button>  
                      </div>
